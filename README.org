@@ -32,4 +32,4 @@
 
 ** Live version
 
-   There's a live version running in [[https://yuri-lemoney.heroku.com]]
+   There's a live version running in [[https://yuri-lemoney.herokuapp.com]]
