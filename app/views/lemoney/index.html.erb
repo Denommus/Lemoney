@@ -1,3 +1,6 @@
+<% if @offers.empty? %>
+    <div>There's nothing to show here! Go to <%= link_to "offers", offers_path %> to start adding some offers</div>
+<% end %>
 <div class="offer_container">
     <% @offers.each do |offer|  %>
         <div class="offer_element">
