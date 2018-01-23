@@ -1,0 +1,30 @@
+* How to run this project
+
+** Setup Ruby 2.5.0
+
+   I recommend using [[https://github.com/rbenv/rbenv][rbenv]] for that, the project already includes a
+   file to work with it
+
+** Install the dependencies
+
+   Run ~bin/bundle install~ to get all of the bundle dependencies
+
+** Run the migrations
+
+   Run ~bin/rake db:migrate~ to create the database
+
+** Add the ~compute_states~ rake task to a scheduler
+
+   For instance, add an entry for it in the crontab by doing ~crontab
+   -u youruser -e~.
+
+   If you're uploading it to Heroku, use its [[https://devcenter.heroku.com/articles/scheduler][scheduler]].
+
+** Run the server
+
+   Now you can run the project with ~bin/rails s~. To add offers, use
+   the URL [[http://localhost:3000/offers]].
+
+** Live version
+
+   There's a live version running in [[https://yuri-lemoney.heroku.com]]
