@@ -65,7 +65,7 @@ class OffersController < ApplicationController
   # PUT /offers/1/disable.json
   def toggle_disable
     respond_to do |format|
-      @offer.update(manual_disable: !@offer.manual_disable, state: :disabled)
+      @offer.update(manual_disable: !@offer.manual_disable, state: :disabled) # The state will be changed to enabled in the worker
       if @offer.manual_disable
         format.html { redirect_to offers_url, notice: 'Offer was successfully disabled.' }
       else
