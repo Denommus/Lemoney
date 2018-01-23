@@ -24,7 +24,4 @@ test:
   database: lemoney_test
 
 production:
-  <<: *default
-  database: lemoney_production
-  user: yuri_lemoney
-  password: <%= ENV['YURI_LEMONEY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
