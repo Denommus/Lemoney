@@ -1,0 +1,2 @@
+* It's not clear whether an offer should be permanently enabled if the administrator presses "enable"
+* There's a mistake in the specs. The author wrote "when current_time <= ends_at", when he really meant "when current_time >= ends_at"

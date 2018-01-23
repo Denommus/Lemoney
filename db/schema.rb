@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180122234141) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "offers", force: :cascade do |t|
     t.string "advertiser_name", null: false
     t.string "url", null: false

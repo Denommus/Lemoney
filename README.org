@@ -9,6 +9,11 @@
 
    Run ~bin/bundle install~ to get all of the bundle dependencies
 
+** Setup the database
+
+   You can quickly setup the database with docker by calling
+   ~docker-compose up -d~, followed by ~bin/rake db:create~
+
 ** Run the migrations
 
    Run ~bin/rake db:migrate~ to create the database
