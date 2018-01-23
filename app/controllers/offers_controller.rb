@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: [:show, :edit, :update, :destroy]
+  before_action :set_offer, only: [:show, :edit, :update, :destroy, :toggle_disable]
 
   # GET /offers
   # GET /offers.json
@@ -58,6 +58,20 @@ class OffersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to offers_url, notice: 'Offer was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  # PUT /offers/1/disable
+  # PUT /offers/1/disable.json
+  def toggle_disable
+    respond_to do |format|
+      @offer.update(manual_disable: !@offer.manual_disable, state: :disabled)
+      if @offer.manual_disable
+        format.html { redirect_to offers_url, notice: 'Offer was successfully disabled.' }
+      else
+        format.html { redirect_to offers_url, notice: 'Offer was successfully enabled.' }
+      end
+      format.json { render :show, status: :ok, location: @offer }
     end
   end
 

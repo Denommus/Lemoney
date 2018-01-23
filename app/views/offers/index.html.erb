@@ -19,6 +19,7 @@
         <td><%= offer.url %></td>
         <td><%= offer.state %></td>
         <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+        <td><%= link_to (offer.manual_disable ? 'Enable' : 'Disable'), toggle_disable_offer_path(offer), method: :put %>
         <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
