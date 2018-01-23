@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  advertiser_name: MyString
-  url: MyString
+  advertiser_name: Foo
+  url: http://foo.com
   description: MyString
   starts_at: 2018-01-22 21:41:41
   ends_at: 2018-01-22 21:41:41
@@ -11,8 +11,8 @@ one:
   manual_disable: false
 
 two:
-  advertiser_name: MyString
-  url: MyString
+  advertiser_name: Bar
+  url: http://bar.com
   description: MyString
   starts_at: 2018-01-22 21:41:41
   ends_at: 2018-01-22 21:41:41
