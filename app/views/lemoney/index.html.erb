@@ -1,0 +1,15 @@
+<div class="offer_container">
+    <% @offers.each do |offer|  %>
+        <div class="offer_element">
+            <div class="message">
+                <div class="message_text"><%= offer.advertiser_name %></div>
+                <div class="message_text">
+                    <% if offer.premium %>
+                        PREMIUM OFFER
+                    <% end %>
+                </div>
+                <div class="message_text"><a href="<%= offer.url%>">Shop Now</a></div>
+            </div>
+        </div>
+    <% end %>
+</div>
